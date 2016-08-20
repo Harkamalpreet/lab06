@@ -19,19 +19,19 @@
     function init() {
         canvas = document.getElementById("canvas");
         stage = new createjs.Stage(canvas);
-        createjs.Ticker.framerate = 60; // 60 frames per second
-        createjs.Ticker.on("tick", gameLoop); // call gameLoop every frame
+        createjs.Ticker.framerate = 6; // 60 frames per second
+        createjs.Ticker.on("tick", gameLoop); 
         main();
     }
     function gameLoop() {
         helloLabel.rotation -= 5;
-        stage.update(); // refresh the stage container
+        stage.update(); 
     }
     function main() {
-        helloLabel = new objects.Label("Harkamal", "40px Consolas", "#000000", 160, 160, true);
+        helloLabel = new objects.Label("My Project", "90px Consolas", "#005500", 380, 160, true);
         stage.addChild(helloLabel);
     }
-    // call init funciton when window finishes loading
+   
     window.addEventListener("load", init);
 })();
 //# sourceMappingURL=app.js.map
